@@ -1,0 +1,13 @@
+{
+  "name": "xiy-ai",
+  "metadata": { "description": "Claude-only local AI Hooter integrations from Xiy." },
+  "owner": { "name": "Xiy" },
+  "plugins": [
+    {
+      "name": "ai-hooter",
+      "source": "./",
+      "description": "Local AI Hooter alerts for Claude Code on macOS.",
+      "version": "0.1.3"
+    }
+  ]
+}
