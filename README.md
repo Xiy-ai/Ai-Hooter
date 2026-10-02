@@ -9,9 +9,10 @@ is a separate product and is not included or licensed by this repository.
 
 ## Preview status
 
-Version **0.1.3** packages the previously tested local Claude connector as a
-Claude Code plugin. It is not yet listed in Anthropic's official directory.
-Fresh installation through the plugin browser still needs end-to-end testing.
+Version **0.1.4** includes the Hooter icon and bundles the pinned MCP dependencies
+as readable JavaScript. Installing the plugin does not run a package installer.
+The existing Anthropic directory submission is under review; a passing local
+test is not evidence of directory approval or a customer installation test.
 
 **A Mac build with Claude support is required.** The multi-assistant preview
 has been tested with Desktop Chat and Desktop Code using manual registration.
@@ -22,17 +23,17 @@ Check [AI Hooter](https://hooter.xiy.ai) for compatible build availability.
 
 - macOS and a running, compatible AI Hooter Mac app.
 - Claude Desktop with access to local Code sessions.
-- Node.js 20 or later and npm available to Claude. You can use the graphical
+- Node.js 20 or later available to Claude. You can use the graphical
   installer from [nodejs.org](https://nodejs.org/). The plugin does not bundle
   a Node executable or silently install a runtime.
-- A current Claude Code version supporting marketplace dependency installation.
+- A current Claude Code version supporting plugins.
 
 Hooter does not require an additional cloud account or API key. Access and
 billing for Claude itself remain separate.
 
 ## Install in Claude Code Desktop
 
-After this repository has been published:
+Add the public GitHub marketplace:
 
 1. Open a **local** Code session and its **Plugins** browser.
 2. Use the marketplace-add option, if available in your version, and enter
@@ -98,15 +99,16 @@ The private pairing credential is stored under the user's
 `~/Library/Application Support/AI Hooter/Claude/` directory, with restrictive
 directory and file permissions, and is never returned as tool output.
 The plugin does not need access to your project source to deliver a Hoot.
-Plugin installation may download pinned dependencies from npm; Hoot delivery
-itself does not download code or contact a remote server.
+Runtime dependencies are included in `dist/`; installation and Hoot delivery
+do not download packages. The build-only dependency manifests live under
+`build/` and are not used by Claude to start the plugin.
 
 Cloud/remote sessions cannot reach a Mac's loopback listener. Use local sessions.
 
 ## Troubleshooting
 
 - **Tools missing:** verify the plugin is enabled in the current local session,
-  Node/npm are available, dependencies installed, and restart the session.
+  Node is available, the bundled `dist/` files are present, and restart the session.
 - **Cannot reach Hooter:** open the compatible Mac app. Run only one Hooter app
   on the shared port. A preview app and the store app should not run together.
 - **Pairing not completed:** check the Mac app for its Allow card and retry
@@ -117,10 +119,14 @@ Cloud/remote sessions cannot reach a Mac's loopback listener. Use local sessions
 ## Development and tests
 
 ```sh
-npm ci --ignore-scripts
-npm test
+npm ci --prefix build --ignore-scripts
+node build/bundle.mjs
+node --test tests/*.test.mjs
 claude plugin validate .
 ```
+
+See [review notes](REVIEW_NOTES.md) for the credential data flow and packaging
+changes. Bundled dependency licenses are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Tests use local fixture servers and disposable test credentials. They cover
 MCP discovery, pairing, credential permissions, acknowledgement, and delivery

@@ -1,0 +1,22 @@
+{
+  "name": "ai-hooter-claude",
+  "version": "0.1.4",
+  "private": true,
+  "description": "Local AI Hooter MCP connector and skill for Claude",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node bundle.mjs",
+    "test": "node --test ../tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  }
+}
