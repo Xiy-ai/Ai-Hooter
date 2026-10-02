@@ -1,6 +1,6 @@
 {
   "name": "ai-hooter",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Give local Claude Code sessions a voice with AI Hooter: private pairing, project alerts, and acknowledgement on your Mac.",
   "author": {
     "name": "Xiy",

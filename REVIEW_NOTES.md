@@ -1,4 +1,4 @@
-# AI Hooter 0.1.4 review notes
+# AI Hooter 0.1.5 review notes
 
 This updates the existing Xiy-ai/Ai-Hooter submission from 0.1.3, commit
 4fa632e7464a4e4d00f66840978e20b504dbb517. It does not change the Mac app,
@@ -6,7 +6,9 @@ the pairing flow, alert behavior, or supported platforms.
 
 ## Icon
 
-The plugin manifest now references the existing 512×512 Hooter PNG.
+Version 0.1.5 replaces the incorrect orange concept icon from 0.1.4 with
+the user-approved 512×512 light-mode puff logo used by the live Codex plugin.
+No runtime behavior changes in this correction.
 
 ## Dependency installation hold
 

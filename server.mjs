@@ -5,7 +5,7 @@ import { createBridge, events } from './bridge.mjs';
 
 const development = process.argv.includes('--development');
 const bridge = createBridge({port: development ? 47832 : 47831});
-const server = new McpServer({name: 'ai-hooter-claude-local', version: '0.1.4'}, {
+const server = new McpServer({name: 'ai-hooter-claude-local', version: '0.1.5'}, {
   instructions: 'AI Hooter is an optional local alert tool. Pair only when the user asks. Send Hoots only with explicit user permission for this conversation/project or this alert. A pairing is not permission to interrupt. Honor revocation immediately. Ordinary summary fields are visual metadata, not spoken alerts. Event summary speaks the supplied text. Acknowledge only an exact Hoot from this conversation when the user responds to it. Never claim delivery unless the tool succeeds. Do not expose pairing credentials.'
 });
 const result = value => ({content: [{type: 'text', text: JSON.stringify(value)}]});

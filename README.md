@@ -9,7 +9,7 @@ is a separate product and is not included or licensed by this repository.
 
 ## Preview status
 
-Version **0.1.4** includes the Hooter icon and bundles the pinned MCP dependencies
+Version **0.1.5** includes the Hooter icon and bundles the pinned MCP dependencies
 as readable JavaScript. Installing the plugin does not run a package installer.
 The existing Anthropic directory submission is under review; a passing local
 test is not evidence of directory approval or a customer installation test.

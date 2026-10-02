@@ -1,6 +1,6 @@
 {
   "name": "ai-hooter-claude",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "Local AI Hooter MCP connector and skill for Claude",
   "type": "module",
