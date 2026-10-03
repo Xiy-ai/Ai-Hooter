@@ -1,5 +1,11 @@
 # AI Hooter for Claude
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/icon-white.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/icon-light.svg">
+  <img src="assets/icon-light.svg" alt="AI Hooter" width="128">
+</picture>
+
 **Let your coding agent call you when it needs you.**
 
 AI Hooter gives Claude a local way to request your attention, flag a decision,
