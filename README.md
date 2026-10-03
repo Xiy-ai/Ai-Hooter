@@ -7,6 +7,10 @@ ask a question, or announce that work is ready. This repository contains only
 the Claude connector, skill, configuration, and tests. The companion Mac app
 is a separate product and is not included or licensed by this repository.
 
+## Version 0.1.6
+
+Uses the supplied white Hooter logo with minimal padding and adds directory support, documentation, privacy, and terms links. Connector behavior is unchanged.
+
 ## Preview status
 
 Version **0.1.5** includes the Hooter icon and bundles the pinned MCP dependencies

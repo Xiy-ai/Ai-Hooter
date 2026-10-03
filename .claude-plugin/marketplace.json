@@ -11,7 +11,7 @@
       "name": "ai-hooter",
       "source": "./",
       "description": "Local AI Hooter alerts for Claude Code on macOS.",
-      "version": "0.1.5"
+      "version": "0.1.6"
     }
   ]
 }

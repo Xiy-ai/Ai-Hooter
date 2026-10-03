@@ -1,6 +1,6 @@
 {
   "name": "ai-hooter",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Give local Claude Code sessions a voice with AI Hooter: private pairing, project alerts, and acknowledgement on your Mac.",
   "author": {
     "name": "Xiy",
@@ -15,5 +15,10 @@
     "local",
     "accessibility"
   ],
-  "icon": "./assets/icon.png"
+  "icon": "./assets/icon-white.png",
+  "displayName": "AI Hooter",
+  "documentationUrl": "https://github.com/Xiy-ai/Ai-Hooter#readme",
+  "privacyPolicyUrl": "https://hooter.xiy.ai/privacy",
+  "termsOfServiceUrl": "https://hooter.xiy.ai/terms",
+  "supportUrl": "https://hooter.xiy.ai/support"
 }
